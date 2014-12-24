@@ -1,0 +1,233 @@
+%
+% Curriculum Vitae of Aleksander Morgado <aleksander@gnu.org>
+%
+% Based on Alessandro Plasmati's CV template:
+% http://www.scribd.com/doc/16335667/Writing-your-Professional-CV-with-LaTeX
+%
+% Compile with:
+%   $> xelatex cv_aleksander_morgado.tex
+%
+%%% highlights:     \hyperlink{name}{text}  ∫Õ  \hypertarget{name}{text} ≈‰Ã◊ π”√£°
+
+%\documentclass[a4paper,10pt]{article}
+
+\documentclass[10pt]{article}
+\usepackage{geometry}
+\geometry{letterpaper,tmargin=1cm,bmargin=-1.5cm,lmargin=0.5cm,rmargin=1cm,headheight=0in,headsep=0in,footskip=0in}
+\setlength{\paperwidth}{21cm}
+\setlength{\paperheight}{29.7cm}	% A4paper scope
+%\setlength{\textheight}{10.5in}
+%\setlength{\textheight}{13.5in}
+
+%A Few Useful Packages
+\usepackage[latin1]{inputenc}
+\usepackage{marvosym}
+\usepackage{fontspec} 					    %for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+%\usepackage{fullpage}				% to fix t/b/l/r margins
+\usepackage{textcomp}
+\usepackage{titlesec}					    %custom \section
+\usepackage{footmisc}
+\usepackage{longtable}                      %for long tables which can be break between pages
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+
+\renewcommand*{\footnotelayout}{\normalsize}
+
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+
+\titlespacing{\section}{0pt}{2pt}{1pt}
+
+%\addtolength{\parskip}{\baselineskip}		space prob occurs when this is set free
+\setlength{\parindent}{0 em}
+%\setlength{\parskip}{-1em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\pagestyle{empty}    % ``empty'' - non-numbered pages;
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+\par{\centering
+  {\huge \textsc{Xin Wang}}
+%  \\ Telecommunications Engineer, MSc. \bigskip    sub-title
+\par}
+\vspace{-1em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Personal Information}
+
+\begin{tabular}{rl}
+    \textsc{Date and Place of Birth:}       & September 1$^{\rm st}$, 1988  |  Tianjin, China \\
+    \textsc{Mailing Address:} & Room 504, Block A, National Astronomical Observatories, Chinese Academy\\
+                              & of Sciences, 20A Datun Road, Chaoyang District, Beijing, 100012, China \\
+    \textsc{E-mail, Cell and Skype Account:}  & \href{mailto:albertfxwang@gmail.com}{albertfxwang@gmail.com}  |  +86-18911630691  |  albertfxwang \\
+    \textsc{Current Status:}
+& Master Candidate at School of Astronomy and Space Sciences, Nanjing University  \\
+& Research Assistant at National Astronomical Observatories, Chinese Academy of Sciences  \\
+\end{tabular}
+
+\vspace{-0.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Objective}
+\textbf{Admission to Ph.D. Program in Astrophysics (Fall 2013) at University of California, Santa Barbara}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+
+\begin{tabular}{r|p{17.5cm}}
+\textsc{Sep. 2010}--     &   School of Astronomy and Space Sciences, Nanjing University  |  \textbf{Towards M.Sc. in Astrophysics (Jun. 2013)}   \\
+\textsc{Current}
+& Field of Interest: Precision Cosmological Constraints, Large-Scale Structure, Gravitational Lensing, Galaxy Clusters, Cosmic Neutrinos, Cosmological Simulation, CMB Physics, Primordial Power Spectrum, Gamma-Ray Bursts. \\
+&   \texttt{Advisors: Profs. Gong-Bo Zhao, Charling Tao, Xuelei Chen, Hu Zhan, Tong-Jie Zhang, Y. F. Huang}   \\
+%Shigehiro Nagataki
+\multicolumn{2}{c}{} \\
+
+\textsc{Sep. 2006}--     &   Department of Astronomy, Nanjing University  |  \textbf{B.Sc. in Astronomy (Jun. 2010)}    \\
+\textsc{Jun. 2010}       &   Weighted Average Score: 84.64/100 (overall), 87.68/100 (major); Ranking: 2$^{\rm nd}$/26  \\
+%&   \texttt{Advisors and Collaborators: Profs. Y. F. Huang, L.-M. Song}  \\
+\end{tabular}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Research Experience}
+\vspace{-1ex}
+\begin{longtable}{r|p{17cm}}
+\textsc{Sep. 2012}--	&   \emph{Title: Applications of the Non-Parametric Bayesian Method to Cosmological Reconstructions}	\\
+\textsc{Current}  &   \small{We attempt to use the newly proposed non-parametric Bayesian method to
+reconstruct the evolution history of some crucial cosmological quantities, i.e., primordial perturbation power spectrum, dark energy equation of state, growth function. We believe that some unique abrupt features of the primordial power spectrum can be revealed by our method. With the help of Fisher formalism and principle component analysis, it is straightforward to forecast the possibility that those features can be detected by next generation projects, i.e., AS3, BigBOSS, Euclid, CMBPol. %The detailed comparisons between our method and previous reconstruction prescriptions shall also be investigated.
+%Following a series of papers developing a new reconstruction prescription, i.e. the non-parametric Bayesian method, we attempt to use it to capture the
+}	\\
+&   \textbf{Project in progress} \\
+\multicolumn{2}{c}{} \\
+
+\textsc{Feb. 2012}--    &   \emph{Title: Constraints on Cosmic Neutrinos and Dark Energy Revisited}  \\
+\textsc{Oct. 2012}  &   \small{Using various cosmological observations, i.e., CMB, weak lensing (WL), BAO, observational Hubble parameter data (OHD), type Ia supernovae (SNIa), we impose constraints on the sum of neutrino masses ($\Sigma m_{\nu}$), the effective number of neutrino species ($N_{\rm eff}$) and dark energy equation of state ($w$). We find that a tight upper limit on $\Sigma m_{\nu}$ can be extracted if $N_{\rm eff}$ and $w$ are fixed, however it will be severely weakened if $N_{\rm eff}$ and $w$ are allowed to vary. This result raises questions on the robustness of previous strict upper bounds on $\Sigma m_{\nu}$, reported in the literature. The best-fits from our most generalized constraint read $\Sigma m_{\nu}=0.556^{+0.231}_{-0.288}\rm eV$, $N_{\rm eff}=3.839\pm0.452$, and $w=-1.058\pm0.088$. The different constraining abilities of current WL, OHD and SNIa samples are assessed and compared.}\\
+&   \textbf{Scientific Product: \hyperlink{5}{Wang et al. (2012) (Item 5 of Publications)}}  \\
+\multicolumn{2}{c}{} \\
+
+\textsc{Sep. 2011}--     &   \emph{Title: Using the Cosmic Distance-Duality Relation to Test the $f_{\rm gas}$ Measurements in Galaxy Clusters} \\
+\textsc{Jan. 2012}  &   \small{We propose a new method to assess X-ray measurements of galaxy cluster gas fraction ($f_{\rm gas}$), via a combination of the Union2 SNIa compilation and the cosmic distance-duality relation, $\eta_{\rm{theory}}=D_{\rm L}(1+z)^{-2}/D_{\rm A}=1$. Since in all previous estimations, $\eta_{\rm{theory}}=1$ is readily assumed, we use this constraint to recover the cosmological information from a given set of $f_{\rm gas}$ data. Our results show that the $f_{\rm gas}$ sample of Ettori et al. 2009 is endowed with an $\Omega_{\Lambda}=0$ reference cosmology, rather than the reported model ($\Omega_\textrm{m}=0.3,\Omega_{\Lambda}=0.7$), which is excluded even at 3-$\sigma$ confidence level.}\\
+&   \textbf{Paper to be submitted}\\
+%&   \textbf{Scientific Product: \hyperlink{6}{Wang et al. (2012) (Item 6 of Publications)}}  \\
+\multicolumn{2}{c}{} \\
+
+\textsc{Jan. 2011}--     &   \emph{Title: Using the Test of the Distance-Duality Relation to Probe the Morphology of Galaxy Clusters} \\
+\textsc{Oct. 2011}       &   \small{Aiming at probing the intrinsic morphology of galaxy clusters, we make a cosmological model-independent test of the cosmic distance-duality relation, $D_{\rm L}(1+z)^{-2}/D_{\rm A}=1$, by two new methods. The luminosity distances ($D_{\rm L}$) are obtained from the Union2 SNIa compilation. The angular diameter distances ($D_{\rm A}$) are provided by two cluster morphological models, which are elliptical $\beta$-model and spherical $\beta$-model. Our results support that the marked triaxial ellipsoidal model is a better geometrical hypothesis describing the structure of galaxy clusters compared with the spherical $\beta$-model.}    \\
+                &   \textbf{Scientific Product: \hyperlink{4}{Meng et al. (2012) (Item 4 of Publications)}} \\
+\multicolumn{2}{c}{} \\
+
+\textsc{Jan. 2010}--     &   \emph{Title: Studies on the Temporal Analysis of Gamma-Ray Bursts}\\
+\textsc{Jul. 2010}       &   \small{I review the observational characteristics of GRBs and demonstrate in detail the procedures of Swift/BAT data reduction. Using the method and shell scripts developed by myself, I have analyzed the data of all Swift GRBs with redshift measurements and derived spectral lags with high precision. I have tested some empirical relations between spectral lag and some observational quantities, i.e., redshift, T90, peak flux, hardness ratio, $\rm E_{peak}$, $\rm E_{iso}$, etc.. Moreover, I have proved there is a high possibility that spectral lags and isotropic luminosity of GRBs are correlated.} \\
+                &   \textbf{Scientific Product: As my dissertation for B.Sc., this thesis has won 1$^{\rm st}$ prize for excellent B.Sc. thesis amongst all universities and colleges in Jiangsu province.} \\
+\multicolumn{2}{c}{} \\
+
+\textsc{Sep. 2008}--     &   \emph{Title: Investigation on the Emission from the Receding Jet of Gamma-Ray Bursts}   \\
+\textsc{Sep. 2009}       &   \small{In a series of work, we have studied the dynamical evolution of double-sided jets launched by the central engine of GRBs and calculated the afterglow emission from both jet components. For the first time, we present a detailed numerical study on the afterglow contributed from the jet component receding from the observer, with the effects of synchrotron self-absorption and equal arrival time surface taken into account. It is found that the receding jet emission is generally very weak and only manifests as a plateau in the late time radio afterglow light curves. However the emission from the receding jet can be significantly enhanced and possibly detectable, if the circum-burst medium density is very high.} \\
+                &   \textbf{Scientific Product: \hyperlink{1}{Wang et al. (2009, 2010a, 2010b) (Items 1, 2, 3 of Publications)}} \\
+
+\end{longtable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-2ex}
+\section{Publications and Activities}
+\begin{longtable}{p{17cm}}
+\multicolumn{1}{c}{\textsc{Academic Journals and Conference Contribution}}      \\
+\vspace{-0.3cm}
+\begin{list}{\labelitemi}{\leftmargin=0.5em}
+    \item[1]\hypertarget{1}{} \textbf{Wang, X.}, Huang, Y. F., \& Kong, S.W. On the Afterglow from the Receding Jet of Gamma-Ray Bursts. 2009, \textit{Astron. Astrophys.}, 505, 1213 (\href{http://arxiv.org/abs/0903.3119}{arXiv:0903.3119})
+    \item[2]\hypertarget{2}{} \textbf{Wang, X.}, Huang, Y. F., \& Kong, S.W. Constraint on the Counter-jet Emission in GRB Afterglows from GRB 980703. 2010a, \textit{Sci. China-Phys. Mech. Astron.}, 53 (Suppl.1), 259
+    \item[3]\hypertarget{3}{} \textbf{Wang, X.}, \& Huang, Y. F. On the Counter-jet Emission in GRB Afterglows. 2010b, \textit{AIP Conference Proceedings}, 1279, 460 (\href{http://arxiv.org/abs/1012.0521}{arXiv:1012.0521})
+    \item[4]\hypertarget{4}{} Meng, X.-L., Zhang, T.-J., Zhan, H., \& \textbf{Wang, X.} Morphology of Galaxy Clusters: A Cosmological Model-Independent Test of the Cosmic Distance-Duality Relation. 2012, \textit{Astrophys. J.}, 745, 98, (\href{http://arxiv.org/abs/1104.2833}{arXiv:1104.2833})
+    \item[5]\hypertarget{5}{} \textbf{Wang, X.}, Meng, X.-L., Zhang, T.-J., Shan, H.Y., Gong, Y., Tao, C., Chen, X., \& Huang, Y. F. Observational Constraints on Cosmic Neutrinos and Dark Energy Revisited. 2012, \textit{J. Cosmol. Astropart. Phys.}, 11, 018 (\href{http://arxiv.org/abs/1210.2136}{arXiv:1210.2136})
+%    \item[6]\hypertarget{6}{} \textbf{Wang, X.}, Meng, X.-L., \& Huang, Y. F., Testing X-ray Measurements of Galaxy Cluster Gas Mass Fraction Using the Cosmic Distance-Duality Relation and Type Ia Supernovae, 2011, MNRAS submitted
+\end{list}  \\
+%\multicolumn{1}{c}{\textsc{Conference Contributions, Unrefereed}}    \\
+%\vspace{-0.4cm}
+%\begin{list}{\labelitemi}{\leftmargin=0.5em}
+%    \item[5]\hypertarget{5}{} \textbf{Wang, X.}, \& Huang, Y. F. On the Counter-jet Emission in GRB Afterglows. 2010b, \textit{AIP Conference Proceedings}, 1279, 460 (\href{http://arxiv.org/abs/1012.0521}{arXiv:1012.0521})
+%\end{list}   \\
+\end{longtable}
+
+\vspace{-3.5em}
+
+\begin{longtable}{r|p{16.5cm}}
+\multicolumn{2}{c}{\textsc{Academic Activities}}  \\
+\textsc{Apr. 2009}   &   \textbf{Presented a talk}, @ \href{http://www.ns-grb.com/index0.html}{Frontiers of Space Astrophysics: Neutron Stars \& Gamma Ray Bursts --- Recent Developments \& Future Directions}, Cairo \& Alexandria, Egypt     \\
+%            &   \emph{Title: Studies on the Emission From the Receding Jet of GRBs}  \\
+\multicolumn{2}{c}{} \\
+%\vspace{1ex}
+\textsc{Apr. 2010}   &   \textbf{Presented a poster}, @ \href{http://www-tap.scphys.kyoto-u.ac.jp/GRB2010/}{Deciphering the Ancient Universe with Gamma-Ray Bursts}, Kyoto, Japan    \\
+%            &   \emph{Title: On the Counter-Jet Emission in GRB Afterglows}     \\
+\multicolumn{2}{c}{} \\
+%\vspace{1ex}
+\textsc{Jun. 2010}   &   \textbf{Presented a talk}, @ \href{http://www.physics.hku.hk/~astro/2010Astro/Index.htm}{A mini-workshop on ``Gamma-ray Sky from Fermi: Neutron Stars and their Environment''}, University of Hong Kong, Hong Kong   \\
+%            &   \emph{Title: A Numerical Study of the Afterglow Emission from GRB Double-Sided Jets}    \\
+\multicolumn{2}{c}{} \\
+%\vspace{1ex}
+\textsc{Jul. 2011}   &   Member of LOC, @ \href{http://lss.bao.ac.cn/meeting/lens11/}{Summer School \& Workshop: Weak and Strong Gravitational Lensing}, NAOC, Beijing  \\
+\multicolumn{2}{c}{} \\
+%\vspace{1ex}
+\textsc{Nov. 2012}   &   \textbf{Presented a talk}, @ \href{http://www.thca.tsinghua.edu.cn/en/index.php/Workshop_programme}{Tsinghua Transient Workshop 2012}, Tsinghua University, Beijing   \\
+%            &   \emph{Title: Observational constraints on cosmic neutrinos and dark energy revisited}    \\
+\end{longtable}
+
+\vspace{-1em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{English Proficiency}
+\begin{tabular}{rl}
+~~~~~GRE General:        & 550 (69\%, Verbal) + 800 (94\%, Quantitative) + 4.0 (49\%, Analytical Writing)    \\
+~~~~~GRE Physics:        & 940 (91\%)    \\
+~~~~~TOEFL:      &   29 (Reading) + 30 (Listening) + 23 (Speaking) + 28 (Writing) = 110
+%CET-6:      &   592/710 (Top 10\%)  \\
+%CET-4:      &   624/710 (Top 10\%)  \\
+\end{tabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Awards and Honors (selected)}
+\begin{tabular}{rl}
+~~~~~~\textsc{Dec. 2012} & National Scholarship for Graduates \\
+& {\it\small ~~~This is the highest honorific scholarship within China conferred annually upon excellent graduate students.}\\
+~~~~~~\textsc{Jan. 2012} & Excellent Graduate Leader in School of Astronomy and Space Sciences, Nanjing University  \\
+%~~~~~~\textsc{Nov. 2010} & Scholarship for Excellent Graduate Students in Nanjing University \\
+~~~~~~\textsc{Aug. 2010} & 1$^{\rm st}$ Prize for Excellent B.Sc. Thesis amongst all Universities and Colleges in Jiangsu Province   \\
+~~~~~~\textsc{Oct. 2009} & Scholarship of National Astronomical Observatories, Chinese Academy of Sciences    \\
+%\textsc{2007--2008} & Special Scholarship for Innovation, People's Scholarship, \textit{Der} Scholarship, etc.   \\
+\end{tabular}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Computer Skills}
+~~~MATLAB, FORTRAN, CosmoMC \& CAMB, C, HEASoft, Origin Lab, Mathmatica, \LaTeX, vim
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Working Experience}
+\begin{tabular}{rp{16cm}}
+\textsc{Dec. 2010}--  & Organizer of Graduate Journal Club in School of Astronomy and Space Sciences, Nanjing University \\
+\textsc{Dec. 2011}    & \small{In total, we arranged 17 meetings and invited 34 speakers. The majority of the speakers are graduate students who come from our school, while we do have some from many other institutes, e.g., Purple Mountain Observatory, University of Science and Technology of China, University of Sydney, etc. Topics are related to speakers' major field of interest. Some academic approaches and experience in doing scientific research are also shared with participants. This activity is financially supported by our school. The organization of this activity has been passed on to other members of my team, since I am no longer in Nanjing.}  \\
+\multicolumn{2}{c}{} \\
+\textsc{\small Sept.--Dec. 2010}  & Teaching Assistant of Theoretical Astrophysics (senior undergraduate course taught by Prof. Z. G. Dai) \\
+\multicolumn{2}{c}{} \\
+\textsc{2010--2012}  & Vice-President and Director of Study Department of Graduate Student Union in School of Astronomy and Space Sciences, Nanjing University\\
+\multicolumn{2}{c}{} \\
+\textsc{2007--2009}  & Vice-President and Director of Study Department of Undergraduate Student Union in Department of Astronomy, Nanjing University\\
+
+\end{tabular}
+
+%\let\thefootnote\relax
+%\footnote{Last updated on \today.}
+
+%\href{http://www.aleksander.es/data/cv\_aleksander\_morgado.pdf}{http://www.aleksander.es/data/cv\_aleksander\_morgado.pdf}
+
+
+%----------------------------------------------------------------------------------------------------------------------------------------------------
+\end{document}
