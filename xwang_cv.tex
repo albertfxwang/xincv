@@ -1,10 +1,10 @@
+%: vim: formatoptions+=tw inde=
 % The evolving curriculum vitae of Xin Wang <albertfxwang@gmail.com>
 % based upon the cv of Aleksander Morgado <aleksander@gnu.org>
 % itself based on Alessandro Plasmati's cv template:
 % http://www.scribd.com/doc/16335667/Writing-your-Professional-CV-with-LaTeX
 %--------------------------------------------------------------------------------------------------------------------------------
-%: vim: formatoptions+=tw inde=
-\documentclass[10pt]{article}
+\documentclass[11pt]{article}
 
 \usepackage{geometry}
 \geometry{letterpaper,tmargin=1cm,bmargin=1cm,lmargin=0.5cm,rmargin=1cm,headheight=0in,headsep=0in,footskip=0in}
@@ -57,15 +57,15 @@
   {\huge \textsc{Xin Wang}}
 %  \\ Telecommunications Engineer, MSc. \bigskip    sub-title
 \par}
-\vspace{-1em}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace{-1em}
 \section{Personal Information}
 \begin{tabular}{rl}
-    \textsc{Date and Place of Birth:}       & September 1$^{\rm st}$, 1988  |  Tianjin, China \\
-    \textsc{Mailing Address:} & 3251 S. Sepulveda Blvd., Apt. 307, Los Angeles, CA 90034, the United States of America \\
-    \textsc{E-mail, Cell and Skype Account:}  & \href{mailto:albertfxwang@gmail.com}{albertfxwang@gmail.com}  |  +1-805-574-0025  |  albertfxwang \\
+%    \textsc{Date and Place of Birth:}       & September 1$^{\rm st}$, 1988  |  Tianjin, China \\
     \textsc{Current Status:}  & Graduate Student at University of California, Los Angeles \\
+    \textsc{E-mail, Cell and Skype Account:}  & \href{mailto:albertfxwang@gmail.com}{albertfxwang@gmail.com}  |  +1-805-574-0025  |  albertfxwang \\
+    \textsc{Mailing Address:} & 3251 S. Sepulveda Blvd., Apt. 307, Los Angeles, CA 90034, the USA \\
 \end{tabular}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -77,9 +77,9 @@
 \section{Education}
 \begin{tabular}{r|p{17.5cm}}
   %--------------------------------------------------------
-  \textsc{Sept. 2015}--      &   Department of Physics and Astronomy, UCLA    |   \textbf{Towards Ph.D. in Astrophysics (Jun. 2018)}   \\
+  \textsc{Sept. 2015}--      &   Department of Physics and Astronomy, UCLA    |   \textbf{Towards Ph.D. in Astrophysics (Jun. 2019)}   \\
   \textsc{Present}
-  & Field of Interest: Nebular Emission Spectroscopy, Strong Gravitational Lensing, Galaxy Clusters, Cosmology.     \\
+  & Field of Interest: Chemical Evolution of Galaxies, Nebular Emission Spectroscopy, Strong Gravitational Lensing. \\
   &   \texttt{Advisor: Prof. Tommaso Treu}     \\
   \multicolumn{2}{c}{} \\
   %--------------------------------------------------------
@@ -90,7 +90,7 @@
   %--------------------------------------------------------
   \textsc{Sept. 2010}--     &   School of Astronomy and Space Sciences, Nanjing University  |  \textbf{M.Sc. in Astrophysics (Jun. 2013)}   \\
   \textsc{May 2013}
-  & Field of Interest: Precision Cosmological Constraints, Galaxy Clusters, Primordial Power Spectrum. \\
+  & Field of Interest: Precision Cosmology, Galaxy Clusters, Primordial Power Spectrum. \\
   & \texttt{Advisors: Profs. Gong-Bo Zhao, Charling Tao, Tong-Jie Zhang, Y. F. Huang, Hu Zhan}   \\
   \multicolumn{2}{c}{} \\
   %--------------------------------------------------------
@@ -111,8 +111,10 @@
   clusters, including 8 targeted by CLASH and 6 Frontier Fields. We will address three scientific questions: 1) What's the role that
   galaxies play in the process of reionization? 2) Why and how is galaxy evolution environmental dependent? 3) How do metals cycle
   in and out of galaxies and what's the interplay between cycling of metals and SF activities?}   \\
-  &   \textbf{Project in progress and scientific products: \hyperlink{14.schmidt.apjl}{Schmidt et al. (2014)},
-  \hyperlink{15.jones.aj}{Jones et al. (2015)}, \hyperlink{15.wang.apj}{Wang et al. (2015)} } \\
+  & \textbf{Project in progress and scientific products: 
+        \hyperlink{16.wang.apj}{Wang et al. (2016)},
+        \hyperlink{15.wang.apj}{Wang et al. (2015)},
+        \hyperlink{15.jones.aj}{Jones et al. (2015)}} \\
   \multicolumn{2}{c}{} \\
   %--------------------------------------------------------
 %  \textsc{Sept. 2012}--  &   \emph{Title: Applications of the Non-Parametric Bayesian Method to Cosmological Reconstructions}	\\
@@ -136,53 +138,61 @@
   &   \textbf{Scientific Product: \hyperlink{12.wang.jcap}{Wang et al. (2012)}}  \\
   \multicolumn{2}{c}{} \\
   %--------------------------------------------------------
-  \textsc{Sept. 2011}--  &   \emph{Title: Using the Cosmic Distance-Duality Relation to Test the $f_{\rm gas}$ Measurements in Galaxy Clusters} \\
-  \textsc{Jan. 2012}     &   \small{We propose a new method to assess X-ray measurements of galaxy cluster gas fraction ($f_{\rm
-  gas}$), via a combination of the Union2 SNIa compilation and the cosmic distance-duality relation, $\eta_{\rm{theory}}=D_{\rm
-  L}(1+z)^{-2}/D_{\rm A}=1$. Since in all previous estimations, $\eta_{\rm{theory}}=1$ is readily assumed, we use this constraint to
-  recover the cosmological information from a given set of $f_{\rm gas}$ data. Our results show that the $f_{\rm gas}$ sample of
-  Ettori et al. 2009 is endowed with an $\Omega_{\Lambda}=0$ reference cosmology, rather than the reported model
-  ($\Omega_\textrm{m}=0.3,\Omega_{\Lambda}=0.7$), which is excluded even at 3-$\sigma$ confidence level.}\\
-  &   \textbf{Scientific Product: \hyperlink{13.wang.raa}{Wang et al. (2013)}}  \\
-  \multicolumn{2}{c}{} \\
+%  \textsc{Sept. 2011}--  &   \emph{Title: Using the Cosmic Distance-Duality Relation to Test the $f_{\rm gas}$ Measurements in Galaxy Clusters} \\
+%  \textsc{Jan. 2012}     &   \small{We propose a new method to assess X-ray measurements of galaxy cluster gas fraction ($f_{\rm
+%  gas}$), via a combination of the Union2 SNIa compilation and the cosmic distance-duality relation, $\eta_{\rm{theory}}=D_{\rm
+%  L}(1+z)^{-2}/D_{\rm A}=1$. Since in all previous estimations, $\eta_{\rm{theory}}=1$ is readily assumed, we use this constraint to
+%  recover the cosmological information from a given set of $f_{\rm gas}$ data. Our results show that the $f_{\rm gas}$ sample of
+%  Ettori et al. 2009 is endowed with an $\Omega_{\Lambda}=0$ reference cosmology, rather than the reported model
+%  ($\Omega_\textrm{m}=0.3,\Omega_{\Lambda}=0.7$), which is excluded even at 3-$\sigma$ confidence level.}\\
+%  &   \textbf{Scientific Product: \hyperlink{13.wang.raa}{Wang et al. (2013)}}  \\
+%  \multicolumn{2}{c}{} \\
   %--------------------------------------------------------
-  \textsc{Jan. 2011}--   &   \emph{Title: Using the Test of the Distance-Duality Relation to Probe the Morphology of Galaxy Clusters} \\
-  \textsc{Oct. 2011}     &   \small{Aiming at probing the intrinsic morphology of galaxy clusters, we make a cosmological
-  model-independent test of the cosmic distance-duality relation, $D_{\rm L}(1+z)^{-2}/D_{\rm A}=1$, by two new methods. The
-  luminosity distances ($D_{\rm L}$) are obtained from the Union2 SNIa compilation. The angular diameter distances ($D_{\rm A}$) are
-  provided by two cluster morphological models, which are elliptical $\beta$-model and spherical $\beta$-model. Our results support
-  that the marked triaxial ellipsoidal model is a better geometrical hypothesis describing the structure of galaxy clusters compared
-  with the spherical $\beta$-model.}    \\
-  &   \textbf{Scientific Product: \hyperlink{12.meng.apj}{Meng et al. (2012)}} \\
-  \multicolumn{2}{c}{} \\
+%  \textsc{Jan. 2011}--   &   \emph{Title: Using the Test of the Distance-Duality Relation to Probe the Morphology of Galaxy Clusters} \\
+%  \textsc{Oct. 2011}     &   \small{Aiming at probing the intrinsic morphology of galaxy clusters, we make a cosmological
+%  model-independent test of the cosmic distance-duality relation, $D_{\rm L}(1+z)^{-2}/D_{\rm A}=1$, by two new methods. The
+%  luminosity distances ($D_{\rm L}$) are obtained from the Union2 SNIa compilation. The angular diameter distances ($D_{\rm A}$) are
+%  provided by two cluster morphological models, which are elliptical $\beta$-model and spherical $\beta$-model. Our results support
+%  that the marked triaxial ellipsoidal model is a better geometrical hypothesis describing the structure of galaxy clusters compared
+%  with the spherical $\beta$-model.}    \\
+%  &   \textbf{Scientific Product: \hyperlink{12.meng.apj}{Meng et al. (2012)}} \\
+%  \multicolumn{2}{c}{} \\
   %--------------------------------------------------------
   \textsc{Sept. 2008}--  &   \emph{Title: Investigation on the Emission from the Receding Jet of Gamma-Ray Bursts}   \\
-  \textsc{Sept. 2009}    &   \small{In a series of work, we have studied the dynamical evolution of double-sided jets launched by the central engine of GRBs and calculated the afterglow emission from both jet components. For the first time, we present a detailed numerical study on the afterglow contributed from the jet component receding from the observer, with the effects of synchrotron self-absorption and equal arrival time surface taken into account. It is found that the receding jet emission is generally very weak and only manifests as a plateau in the late time radio afterglow light curves. However the emission from the receding jet can be significantly enhanced and possibly detectable, if the circum-burst medium density is very high.} \\
+  \textsc{Sept. 2009}    &   \small{In a series of work, we have studied the dynamical evolution of double-sided jets launched by 
+  the central engine of GRBs and calculated the afterglow emission from both jet components. For the first time, we present a 
+  detailed numerical study on the afterglow contributed from the jet component receding from the observer, with the effects of 
+  synchrotron self-absorption and equal arrival time surface taken into account. It is found that the receding jet emission is 
+  generally very weak and only manifests as a plateau in the late time radio afterglow light curves. However the emission from the 
+  receding jet can be significantly enhanced and possibly detectable, if the circum-burst medium density is very high.} \\
   &   \textbf{Scientific Product: \hyperlink{09.wang.aa}{Wang et al. (2009)}} \\
   %========================================================
 \end{longtable}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{1em}
 \section{Publications and Activities}
 \begin{longtable}{p{17cm}}
-\multicolumn{1}{c}{\textsc{Academic Journals and Conference Contribution}}      \\
+\multicolumn{1}{c}{\textsc{Selected Papers in Refereed Academic Journals}}      \\
 \vspace{-0.3cm}
 \begin{list}{\labelitemi}{\leftmargin=0.5em}
     \item[1]\hypertarget{09.wang.aa}{} \textbf{Wang, X.}, Huang, Y. F., \& Kong, S. W. On the Afterglow from the Receding Jet of Gamma-Ray Bursts. 2009, \textit{Astron. Astrophys.}, 505, 1213 (\href{http://arxiv.org/abs/0903.3119}{arXiv:0903.3119})
-    \item[2]\hypertarget{12.meng.apj}{} Meng, X.-L., Zhang, T.-J., Zhan, H., \& \textbf{Wang, X.} Morphology of Galaxy Clusters: A Cosmological Model-Independent Test of the Cosmic Distance-Duality Relation. 2012, \textit{Astrophys. J.}, 745, 98 (\href{http://arxiv.org/abs/1104.2833}{arXiv:1104.2833})
-    \item[3]\hypertarget{12.wang.jcap}{} \textbf{Wang, X.}, Meng, X.-L. et al. Observational Constraints on Cosmic Neutrinos and Dark Energy Revisited. 2012, \textit{J. Cosmol. Astropart. Phys.}, 11, 018 (\href{http://arxiv.org/abs/1210.2136}{arXiv:1210.2136})
-    \item[4]\hypertarget{13.wang.raa}{} \textbf{Wang, X.}, Meng, X.-L., \& Huang, Y. F., Testing X-ray Measurements of Galaxy Cluster Gas
-  Mass Fraction Using the Cosmic Distance-Duality Relation and Type Ia Supernovae. 2013, RAA, 13, 1013 (\href{http://arxiv.org/abs/1305.2077}{arXiv:1305.2077})
-    \item[5]\hypertarget{14.schmidt.apjl}{} Schmidt, K. B., Treu, T., Brammer, G. B., Bradac, M., \textbf{Wang, X.} et al. Through
-      the Looking GLASS: HST Spectroscopy of Faint Galaxies Lensed by the Frontier Fields Cluster MACSJ0717.5+3745. 2014,
-      \textit{Astrophys. J. Letters}, 782L, 36, (\href{http://arxiv.org/abs/1401.0532}{arXiv:1401.0532})
-    \item[6]\hypertarget{15.jones.aj}{} Jones, T., \textbf{Wang, X.} et al. The Grism Lens-Amplified Survey from Space (GLASS).
-      II. Gas-Phase Metallicity and Radial Gradients in an Interacting System At z$\sim$2. 2015, \textit{Astron. J.}, 149, 107
-      (\href{http://arxiv.org/abs/1410.0967}{arXiv:1410.0967})
-    \item[7]\hypertarget{15.wang.apj}{} \textbf{Wang, X.}, Hoag, A., Huang, K.-H., Treu, T., Bradac, M., Schmidt, K. B. et al. The
-      Grism Lens-Amplified Survey from Space (GLASS). IV. Mass reconstruction of the lensing cluster Abell 2744 from frontier
-      field imaging and GLASS spectroscopy. 2015, \textit{Astrophys. J.}, 811, 29 (\href{http://arxiv.org/abs/1504.02405}{arXiv:1504.02405}) 
+%    \item[2]\hypertarget{12.meng.apj}{} Meng, X.-L., Zhang, T.-J., Zhan, H., \& \textbf{Wang, X.} Morphology of Galaxy Clusters: A Cosmological Model-Independent Test of the Cosmic Distance-Duality Relation. 2012, \textit{Astrophys. J.}, 745, 98 (\href{http://arxiv.org/abs/1104.2833}{arXiv:1104.2833})
+    \item[2]\hypertarget{12.wang.jcap}{} \textbf{Wang, X.}, Meng, X.-L. et al. Observational Constraints on Cosmic Neutrinos and Dark Energy Revisited. 2012, \textit{J. Cosmol. Astropart. Phys.}, 11, 018 (\href{http://arxiv.org/abs/1210.2136}{arXiv:1210.2136})
+%    \item[4]\hypertarget{13.wang.raa}{} \textbf{Wang, X.}, Meng, X.-L., \& Huang, Y. F., Testing X-ray Measurements of Galaxy Cluster Gas
+%  Mass Fraction Using the Cosmic Distance-Duality Relation and Type Ia Supernovae. 2013, RAA, 13, 1013 (\href{http://arxiv.org/abs/1305.2077}{arXiv:1305.2077})
+%    \item[5]\hypertarget{14.schmidt.apjl}{} Schmidt, K. B., Treu, T., Brammer, G. B., Bradac, M., \textbf{Wang, X.} et al. Through
+%      the Looking GLASS: HST Spectroscopy of Faint Galaxies Lensed by the Frontier Fields Cluster MACSJ0717.5+3745. 2014,
+%      \textit{Astrophys. J. Letters}, 782L, 36, (\href{http://arxiv.org/abs/1401.0532}{arXiv:1401.0532})
+    \item[3]\hypertarget{15.jones.aj}{} Jones, T., \textbf{Wang, X.} et al. The Grism Lens-Amplified Survey from Space (GLASS) II.
+        Gas-Phase Metallicity and Radial Gradients in an Interacting System At z$\sim$2. 2015, \textit{Astron. J.}, 149, 107
+        (\href{http://arxiv.org/abs/1410.0967}{arXiv:1410.0967})
+    \item[4]\hypertarget{15.wang.apj}{} \textbf{Wang, X.} et al. The Grism Lens-Amplified Survey from Space (GLASS) IV. 
+        Mass reconstruction of the lensing cluster Abell 2744 from frontier field imaging and GLASS spectroscopy. 2015, 
+        \textit{Astrophys. J.}, 811, 29 (\href{http://arxiv.org/abs/1504.02405}{arXiv:1504.02405})
+    \item[5]\hypertarget{16.wang.apj}{} \textbf{Wang, X.} et al. The Grism Lens-Amplified Survey from Space (GLASS) X.
+        Sub-kpc resolution gas-phase metallicity maps at cosmic noon behind the Hubble Frontier Fields cluster MACS1149.6+2223. 
+        2016, submitted to ApJ (\href{http://arxiv.org/abs/1610.07558}{arXiv:1610.07558})
 \end{list}  \\
 %\multicolumn{1}{c}{\textsc{Conference Contributions, Unrefereed}}    \\
 %\vspace{-0.4cm}
@@ -196,7 +206,7 @@
 
 \begin{longtable}{r|p{16.5cm}}
 
-    \multicolumn{2}{c}{\textsc{Academic Activities}}  \\
+    \multicolumn{2}{c}{\textsc{Selected Academic Activities}}  \\
     \multicolumn{2}{c}{} \\
 
     \textsc{Apr. 2009}   &   \textbf{Presented a talk}, @ \href{http://www.ns-grb.com/index0.html}{Frontiers of Space Astrophysics: Neutron Stars \& Gamma Ray Bursts --- Recent Developments \& Future Directions}, Cairo \& Alexandria, Egypt     \\
@@ -205,8 +215,9 @@
 %            &   \emph{Title: On the Counter-Jet Emission in GRB Afterglows}     \\
 %\multicolumn{2}{c}{} \\
 
-    \textsc{Jun. 2010}   &   \textbf{Presented a talk}, @ \href{http://www.physics.hku.hk/~astro/2010Astro/Index.htm}{A mini-workshop on ``Gamma-ray Sky from Fermi: Neutron Stars and their Environment''}, University of Hong Kong, Hong Kong   \\
-    \multicolumn{2}{c}{} \\
+%    \textsc{Jun. 2010}   &   \textbf{Presented a talk}, @ \href{http://www.physics.hku.hk/~astro/2010Astro/Index.htm}{A mini-workshop on ``Gamma-ray Sky from Fermi: Neutron Stars and their Environment''}, University of Hong Kong, Hong Kong   \\
+%    \multicolumn{2}{c}{} \\
+
 %\textsc{Jul. 2011}   &   Member of LOC, @ \href{http://lss.bao.ac.cn/meeting/lens11/}{Summer School \& Workshop: Weak and Strong Gravitational Lensing}, NAOC, Beijing  \\
 %\multicolumn{2}{c}{} \\
 
@@ -219,7 +230,6 @@ General Assembly}, Honolulu, HI     \\
 
 \end{longtable}
 
-\vspace{-1ex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\section{English Proficiency}
 %\begin{tabular}{rl}
@@ -243,10 +253,13 @@ General Assembly}, Honolulu, HI     \\
 \end{tabular}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{1em}
 \section{Computer Skills}
-~~~Python, MATLAB, FORTRAN, CosmoMC \& CAMB, C, HEASoft, Origin Lab, Mathmatica, \LaTeX, vim
+~~~Python, MATLAB, FORTRAN, C, \LaTeX, vim, Mathmatica, Origin Lab
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{1em}
 \section{Working Experience}
 \begin{tabular}{rp{16cm}}
 \textsc{Dec. 2010}--  & Organizer of Graduate Journal Club in School of Astronomy and Space Sciences, Nanjing University \\
