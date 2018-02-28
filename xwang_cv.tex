@@ -7,7 +7,8 @@
 \documentclass[letterpaper,10pt]{article}
 
 \usepackage{geometry}
-\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=0in}
+\newcommand{\marg}{0.9in}
+\geometry{letterpaper,tmargin=\marg,bmargin=\marg,lmargin=\marg,rmargin=\marg,headheight=0in,headsep=.3in,footskip=.3in}
 %\geometry{letterpaper,tmargin=1cm,bmargin=1cm,lmargin=0.5cm,rmargin=1cm,headheight=0in,headsep=0in,footskip=0in}
 % US letter layout
 %\setlength{\paperwidth}{8.5in}
@@ -46,10 +47,21 @@
 \setlength{\parindent}{0 em}
 %\setlength{\parskip}{-1em}
 
+%= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% add page number without the header line
+\usepackage{fancyhdr}
+% Redefine plain style, which is used for titlepage and chapter beginnings
+% From https://tex.stackexchange.com/a/30230/828
+\fancypagestyle{plain}{%
+    \renewcommand{\headrulewidth}{0pt}%
+    \fancyhf{}% Start with clearing everything in the header and footer
+    \fancyfoot[C]{\thepage}% Set the center of the footer to be the page number, other options: L, R
+}
+\pagestyle{plain}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\pagestyle{empty}    % ``empty'' - non-numbered pages;
-\font\fb=''[cmr10]'' %for use with \LaTeX command
 
 \par{\centering
   {\huge \textsc{Xin Wang}}
@@ -57,7 +69,6 @@
 \par}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\vspace{-1em}
 \section{Personal Information}
 \begin{tabular}{rl}
     \textsc{Date and Place of Birth:}       & September 1$^{\rm st}$, 1988  |  Tianjin, China \\
@@ -73,13 +84,14 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Education}
-\begin{tabular}{r|p{5.5in}}
+\begin{tabular}{r|p{6.5in}}
 %\begin{tabular}{r|p{17.5cm}}
   %--------------------------------------------------------
   \textsc{Sept. 2015}--      &   Department of Physics and Astronomy, UCLA    |   \textbf{Towards Ph.D. in Astrophysics (Jun. 2019)}   \\
   \textsc{Present}
   & Field of Interest: Spatially Resolved Spectroscopy, Chemical Evolution of 
-  Galaxies, Extragalactic Nebular Emission, Strong Gravitational Lensing. \\
+  Galaxies, \\ 
+  & ~~~~~~~~~~~~~~~~~~~~~~ Extragalactic Nebular Emission, Strong Gravitational Lensing. \\
   &   \texttt{Advisor: Prof. Tommaso Treu}     \\
   \multicolumn{2}{c}{} \\
   %--------------------------------------------------------
@@ -90,7 +102,7 @@
   %--------------------------------------------------------
   \textsc{Sept. 2010}--     &   School of Astronomy and Space Sciences, Nanjing University  |  \textbf{M.Sc. in Astrophysics (Jun. 2013)}   \\
   \textsc{May 2013}
-  & Field of Interest: Precision Cosmology, Galaxy Clusters, Primordial Power Spectrum. \\
+  & Field of Interest: Precision Cosmology, Galaxy Clusters, Gamma-ray Bursts. \\
   & \texttt{Advisors: Profs. Y. F. Huang, Charling Tao, Gong-Bo Zhao}   \\
   \multicolumn{2}{c}{} \\
   %--------------------------------------------------------
@@ -106,7 +118,7 @@
 \begin{longtable}{r|p{5.5in}}
 %\begin{longtable}{r|p{17cm}}
   %--------------------------------------------------------
-  \textsc{Sept. 2013}--  &   \emph{Title: The Grism Lens-Amplified Survey from Space (GLASS) Project}   \\
+  \textsc{Sept. 2013}--  &   \emph{Title: The Grism Lens-Amplified Survey from Space (GLASS) program}   \\
   \textsc{Present}       &   \small{\textit{GLASS} is a cycle-21 HST Large Program allocated 140 orbits of Grism spectroscopy
   assisted with HST optical and infrared imaging. We survey the core and infall regions of 10 dynamically relaxed, massive
   clusters, including 8 targeted by CLASH and 6 Frontier Fields. We will address three scientific questions: 1) What's the role that
@@ -133,9 +145,9 @@
   effective number of neutrino species ($N_{\rm eff}$) and dark energy equation of state ($w$). We find that a tight upper limit
   on $\Sigma m_{\nu}$ can be extracted if $N_{\rm eff}$ and $w$ are fixed, however it will be severely weakened if $N_{\rm eff}$ and
   $w$ are allowed to vary. This result raises questions on the robustness of previous strict upper bounds on $\Sigma m_{\nu}$,
-  reported in the literature. The best-fits from our most generalized constraint read $\Sigma m_{\nu}=0.556^{+0.231}_{-0.288}\rm
-  eV$, $N_{\rm eff}=3.839\pm0.452$, and $w=-1.058\pm0.088$. The different constraining abilities of current WL, OHD and SNIa samples 
-  are assessed and compared.}\\
+  reported in the literature.
+  %The best-fits from our most generalized constraint read $\Sigma m_{\nu}=0.556^{+0.231}_{-0.288}\rm eV$, $N_{\rm eff}=3.839\pm0.452$, and $w=-1.058\pm0.088$. 
+  The different constraining abilities of current WL, OHD and SNIa samples are assessed and compared.}\\
   &   \textbf{Scientific Product: \hyperlink{12.wang.jcap}{Wang et al. (2012)}}  \\
   \multicolumn{2}{c}{} \\
   %--------------------------------------------------------
@@ -160,12 +172,12 @@
 %  \multicolumn{2}{c}{} \\
   %--------------------------------------------------------
   \textsc{Sept. 2008}--  &   \emph{Title: Investigation on the Emission from the Receding Jet of Gamma-Ray Bursts}   \\
-  \textsc{Sept. 2009}    &   \small{In a series of work, we have studied the dynamical evolution of double-sided jets launched by 
+  \textsc{Sept. 2009}    &   \small{We studied the dynamical evolution of double-sided jets launched by 
   the central engine of GRBs and calculated the afterglow emission from both jet components. For the first time, we present a 
   detailed numerical study on the afterglow contributed from the jet component receding from the observer, with the effects of 
   synchrotron self-absorption and equal arrival time surface taken into account. It is found that the receding jet emission is 
   generally very weak and only manifests as a plateau in the late time radio afterglow light curves. However the emission from the 
-  receding jet can be significantly enhanced and possibly detectable, if the circum-burst medium density is very high.} \\
+  receding jet can be significantly enhanced and possibly detectable, if the circum-burst medium density is high.} \\
   &   \textbf{Scientific Product: \hyperlink{09.wang.aa}{Wang et al. (2009)}} \\
   %========================================================
 \end{longtable}
@@ -212,13 +224,13 @@
     \multicolumn{2}{c}{\textsc{Selected Academic Activities}}  \\
     \multicolumn{2}{c}{} \\
 
-    \textsc{Apr. 2009}   &   \textbf{Presented a talk}, @ \href{http://www.ns-grb.com/index0.html}{Frontiers of Space Astrophysics: Neutron Stars \& Gamma Ray Bursts --- Recent Developments \& Future Directions}, Cairo \& Alexandria, Egypt     \\
+    \textsc{Apr. 2009}   &   \textbf{Contributed talk}, @ \href{http://www.ns-grb.com/index0.html}{Frontiers of Space Astrophysics: Neutron Stars \& Gamma Ray Bursts --- Recent Developments \& Future Directions}, Cairo \& Alexandria, Egypt     \\
     \multicolumn{2}{c}{} \\
 %\textsc{Apr. 2010}   &   \textbf{Presented a poster}, @ \href{http://www-tap.scphys.kyoto-u.ac.jp/GRB2010/}{Deciphering the Ancient Universe with Gamma-Ray Bursts}, Kyoto, Japan    \\
 %            &   \emph{Title: On the Counter-Jet Emission in GRB Afterglows}     \\
 %\multicolumn{2}{c}{} \\
 
-    \textsc{Jun. 2010}   &   \textbf{Presented a talk}, @ \href{http://www.physics.hku.hk/~astro/2010Astro/Index.htm}{A mini-workshop on ``Gamma-ray Sky from Fermi: Neutron Stars and their Environment''}, University of Hong Kong, Hong Kong   \\
+    \textsc{Jun. 2010}   &   \textbf{Contributed talk}, @ \href{http://www.physics.hku.hk/~astro/2010Astro/Index.htm}{A mini-workshop on ``Gamma-ray Sky from Fermi: Neutron Stars and their Environment''}, University of Hong Kong, Hong Kong   \\
     \multicolumn{2}{c}{} \\
 
 %\textsc{Jul. 2011}   &   Member of LOC, @ \href{http://lss.bao.ac.cn/meeting/lens11/}{Summer School \& Workshop: Weak and Strong Gravitational Lensing}, NAOC, Beijing  \\
@@ -228,18 +240,49 @@
 %            &   \emph{Title: Observational constraints on cosmic neutrinos and dark energy revisited}    \\
 %    \multicolumn{2}{c}{} \\
 
-    \textsc{Aug. 2015}   &   \textbf{Presented a talk}, @ \href{http://hffiau.epfl.ch/page-116896.html}{Focus Meeting 22 at XXIX IAU
+    \textsc{Aug. 2015}   &   \textbf{Contributed talk}, @ \href{http://hffiau.epfl.ch/page-116896.html}{Focus Meeting 22 at XXIX IAU
 General Assembly}, Honolulu, HI     \\
     \multicolumn{2}{c}{} \\
 
-    \textsc{Jun. 2017}   &   \textbf{Presented a talk}, @ 
+    \textsc{Jun. 2016}   &   \textbf{Invited talk}, @ Nanjing University, Nanjing \\
+    \multicolumn{2}{c}{} \\
+
+    \textsc{Jun. 2016}   &   \textbf{Invited talk}, @ Tsinghua University, Beijing \\
+    \multicolumn{2}{c}{} \\
+
+    \textsc{Jun. 2016}   &   \textbf{Invited talk}, @ National Astronomical Observatories of China, Beijing   \\
+    \multicolumn{2}{c}{} \\
+
+    \textsc{Aug. 2016}   &   \textbf{Colloquium talk}, @ Department of Astronomy, University of Michigan, Ann Arbor, MI \\
+    \multicolumn{2}{c}{} \\
+
+    \textsc{Jan. 2017}   &   \textbf{Colloquium talk}, @ Steward Observatory, University of Arizona, Tucson, AZ \\
+    \multicolumn{2}{c}{} \\
+
+    \textsc{Jun. 2017}   &   \textbf{Contributed talk}, @ 
     \href{http://eas.unige.ch/EWASS2017/session.jsp?id=SS11}{Special Session 11 at 
     European Week of Astronomy and Space Science}, Prague, Czech Republic   \\
     \multicolumn{2}{c}{} \\
 
-    \textsc{Jul. 2017}   &   \textbf{Presented a talk}, @
+    \textsc{Aug. 2017}   &   \textbf{Contributed talk}, @
     \href{http://darkuniverse2017.csp.escience.cn/dct/page/65580}{Shedding Light on 
     the Dark Universe with Extremely Large Telescopes}, Lanzhou, China      \\
+    \multicolumn{2}{c}{} \\
+
+    \textsc{Sept. 2017}   &   \textbf{Invited talk}, @ Shanghai Jiao Tong University, Shanghai \\
+    \multicolumn{2}{c}{} \\
+
+    \textsc{Sept. 2017}   &   \textbf{Invited talk}, @ Nanjing University, Nanjing \\
+    \multicolumn{2}{c}{} \\
+
+    \textsc{Sept. 2017}   &   \textbf{Invited talk}, @ Tsinghua University, Beijing \\
+    \multicolumn{2}{c}{} \\
+
+    \textsc{Jan. 2018}   &   \href{http://obs.carnegiescience.edu/talk_event/828}{\textbf{Colloquium talk}}, @ Carnegie Observatories, Pasadena, CA \\
+    \multicolumn{2}{c}{} \\
+
+    \textsc{Feb. 2018}   &   \href{https://www.ipac.caltech.edu/event/358}{\textbf{Colloquium talk}}, @ IPAC, Caltech, Pasadena, CA \\
+    \multicolumn{2}{c}{} \\
 
 \end{longtable}
 
@@ -256,35 +299,42 @@ General Assembly}, Honolulu, HI     \\
 \begin{tabular}{rp{5in}}
 ~~~~~~\textsc{Apr. 2015} & AAS International Travel Grant (\$1k)    \\
 ~~~~~~\textsc{Jun. 2014} & 1$^{\rm st}$ Prize for Excellent M.Sc. Thesis amongst all Universities and Colleges in Jiangsu Province   \\
-~~~~~~\textsc{Dec. 2012} & National Scholarship for Graduates   \\
+~~~~~~\textsc{Sept. 2013} & Broida Fellowship, UCSB (\$3k)  \\
+~~~~~~\textsc{Dec. 2012} & National Scholarship for Graduates ($\sim$\$4k)  \\
 & {\it\small ~~~This is the highest honorific scholarship within China conferred annually upon excellent graduate students.}\\
 %~~~~~~\textsc{Jan. 2012} & Excellent Graduate Leader in School of Astronomy and Space Sciences, Nanjing University  \\
 %~~~~~~\textsc{Nov. 2010} & Scholarship for Excellent Graduate Students in Nanjing University \\
 ~~~~~~\textsc{Aug. 2010} & 1$^{\rm st}$ Prize for Excellent B.Sc. Thesis amongst all Universities and Colleges in Jiangsu Province   \\
-~~~~~~\textsc{Oct. 2009} & Scholarship of National Astronomical Observatories, Chinese Academy of Sciences    \\
+~~~~~~\textsc{Oct. 2009} & Scholarship of National Astronomical Observatories, Chinese Academy of Sciences   \\
 %\textsc{2007--2008} & Special Scholarship for Innovation, People's Scholarship, \textit{Der} Scholarship, etc.   \\
 \end{tabular}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{1em}
 \section{Computer Skills}
-~~~Python, MATLAB, FORTRAN, C, \LaTeX, vim, Mathmatica, Origin Lab
+~~~~Python, MATLAB, FORTRAN, C, \LaTeX, vim, Github, Mathmatica
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{1em}
-\section{Working Experience}
+\section{Working Experience and Outreach Activities}
 \begin{tabular}{rp{5.5in}}
 %\begin{tabular}{rp{16cm}}
-\textsc{Dec. 2010}--  & Organizer of Graduate Journal Club in School of Astronomy and Space Sciences, Nanjing University \\
+\textsc{Dec. 2010}--  & Organizer of Graduate Journal Club in School of Astronomy 
+and Space Sciences, NJU \\
 \textsc{Dec. 2011}    & \small{In total, I arranged 17 meetings, and invited 
 34 speakers.
 %most of which are graduate students. The majority of the speakers come from our school, while we do have speakers from many other institutes, e.g., Purple Mountain Observatory, University of Science and Technology of China, University of Sydney. 
 The topics are related to the major field of interest of the speakers, who will also share with participants some academic experience in doing scientific research. This activity is financially supported by our school.}  \\
 \multicolumn{2}{c}{} \\
-\textsc{Jun. 2014}--  & Organizer of Treu Group Meeting, UCSB \& UCLA \\
-\textsc{Jun. 2015}    & \small{I organized the weekly group meetings of my 
-advisor's.}     \\
+\textsc{2013}  & Teaching assistant of Physics Lab hands-on courses, UCSB   \\
+\multicolumn{2}{c}{} \\
+\textsc{2014--2015}  & Organizer of Treu Group Meetings, UCSB \& UCLA \\
+\multicolumn{2}{c}{} \\
+\textsc{2015--2017}  & Volunteer in the annual \textsc{Exploring Your Universe!} events, UCLA \\
+\multicolumn{2}{c}{} \\
+\textsc{2015--2017}  & Demonstrator of Astronomy experiments to local K12 schools \\
+\multicolumn{2}{c}{} \\
 
 %\textsc{\small Sept.--Dec. 2010}  & Teaching Assistant of Theoretical Astrophysics (senior undergraduate course taught by Prof. Z. G. Dai) \\
 %\multicolumn{2}{c}{} \\
