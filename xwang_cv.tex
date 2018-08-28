@@ -25,27 +25,37 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 %\usepackage{fullpage}				        % to fix t/b/l/r margins
 \usepackage{textcomp}
-\usepackage{titlesec}					    %custom \section
 \usepackage{footmisc}
 \usepackage{longtable}                      %for long tables which can be break between pages
 
-%Setup hyperref package, and colours for links
+%%% FONTS
+\usepackage{amsmath,amssymb,amsxtra,amsfonts}   % to use pmatrix, etc.
+\renewcommand*{\footnotelayout}{\normalsize}
+\defaultfontfeatures{Mapping=tex-text}
+
+%%% PARAGRAPH
+%\addtolength{\parskip}{\baselineskip}		space prob occurs when this is set free
+\setlength{\parindent}{0em}
+%\setlength{\parskip}{-1em}
+
+%-------------- setup hyperref package, and colours for links
 \usepackage{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
-
-%FONTS
-\defaultfontfeatures{Mapping=tex-text}
-
-\renewcommand*{\footnotelayout}{\normalsize}
-
+%-------------- custom formatting for \section
+\usepackage{titlesec}
 \titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
-
-\titlespacing{\section}{0pt}{2pt}{1pt}
-
-%\addtolength{\parskip}{\baselineskip}		space prob occurs when this is set free
-\setlength{\parindent}{0 em}
-%\setlength{\parskip}{-1em}
+\titlespacing{\section}{0pt}{2pt}{0em}
+%-------------- add euro symbol
+\usepackage[gen]{eurosym}
+%-------------- fine tune empty line height
+\newcommand{\narrow}{-1.8ex}
+%-------------- reduce row height in table env, see: https://tex.stackexchange.com/questions/176874/reducing-row-height-in-a-longtable
+%\begingroup
+%\renewcommand\arraystretch{0.5}
+%\begin{longtable}{...}
+%\end{longtable}
+%\endgroup
 
 %= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 % add page number without the header line
@@ -64,11 +74,12 @@
 \begin{document}
 
 \par{\centering
-  {\huge \textsc{Xin Wang}}
+  {\LARGE \textsc{Xin Wang}}
 %  \\ Telecommunications Engineer, MSc. \bigskip    sub-title
 \par}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-.8em}
 \section{Personal Information}
 \begin{tabular}{rl}
 %    \textsc{Date and Place of Birth:}       & September 1$^{\rm st}$, 1988  |  Tianjin, China \\
@@ -83,53 +94,55 @@
 %\textbf{Admission to Ph.D. Program in Astrophysics (Fall 2013) at University of California, Santa Barbara}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-.8em}
 \section{Education}
 \begin{tabular}{r|p{6.5in}}
 %\begin{tabular}{r|p{17.5cm}}
   %--------------------------------------------------------
-  \textsc{Sept. 2015}--      &   Department of Physics and Astronomy, UCLA    |   \textbf{Towards Ph.D. in Astrophysics (Jun. 2019)}   \\
-  \textsc{Present}
-  & Field of Interest: Spatially Resolved Spectroscopy, Chemical Evolution of 
-  Galaxies, \\ 
-  & ~~~~~~~~~~~~~~~~~~~~~~ Extragalactic Nebular Emission, Strong Gravitational Lensing. \\
-  &   \texttt{Advisor: Prof. Tommaso Treu}     \\
-  \multicolumn{2}{c}{} \\
+  \textsc{Sept. 2015}--     & Department of Physics and Astronomy, UCLA    |   \textbf{Towards Ph.D. in Astrophysics (Jun. 2019)}   \\
+  \textsc{Present}          & Field of Interest: Spatially Resolved Spectroscopy, Chemical Evolution of Galaxies, \\
+                            & \hspace*{7.3em} Extragalactic Nebular Emission, Strong Gravitational Lensing. \\
+                            & \texttt{Advisors: Profs. Tucker A. Jones, Gabriel B. Brammer, Tommaso Treu, Keren Sharon}     \\
+  \multicolumn{2}{c}{} \\[\narrow]
   %--------------------------------------------------------
-  \textsc{Sept. 2013}--      &   Physics Department, University of California, Santa Barbara    |   \textbf{M.A. in Physics (Jun. 2015)}   \\
-  \textsc{Sept. 2015}
-  &   \texttt{Advisor: Prof. Tommaso Treu}; \quad Cumulative Total (Grad) GPA: 3.96     \\
-  \multicolumn{2}{c}{} \\
+  \textsc{Sept. 2013}--     & Physics Department, University of California, Santa Barbara    |   \textbf{M.A. in Physics (Jun. 2015)}   \\
+  \textsc{Sept. 2015}       & Graduate Course Cumulative GPA: 3.96     \\
+  \multicolumn{2}{c}{} \\[\narrow]
   %--------------------------------------------------------
-  \textsc{Sept. 2010}--     &   School of Astronomy and Space Sciences, Nanjing University  |  \textbf{M.Sc. in Astrophysics (Jun. 2013)}   \\
-  \textsc{May 2013}
-  & Field of Interest: Precision Cosmology, Galaxy Clusters, Gamma-ray Bursts. \\
-  & \texttt{Advisors: Profs. Y. F. Huang, Charling Tao, Gong-Bo Zhao}   \\
-  \multicolumn{2}{c}{} \\
+  \textsc{Sept. 2010}--     & School of Astronomy and Space Sciences, Nanjing University  |  \textbf{M.Sc. in Astrophysics (Jun. 2013)}   \\
+  \textsc{May 2013}         & Field of Interest: Precision Cosmology, Galaxy Clusters, Gamma-ray Bursts. \\
+                            & \texttt{Advisors: Profs. Yong Feng Huang, Charling Tao, Gong-Bo Zhao}   \\
+  \multicolumn{2}{c}{} \\[\narrow]
   %--------------------------------------------------------
   \textsc{Sept. 2006}--     &   Department of Astronomy, Nanjing University  |  \textbf{B.Sc. in Astronomy (Jun. 2010)}    \\
-  \textsc{Jun. 2010}       &   Weighted Average Score: 84.64/100 (overall), 87.68/100 (major); Ranking: 2$^{\rm nd}$/26  \\
+  \textsc{Jun. 2010}        &   Weighted Average Score: 84.64/100 (overall), 87.68/100 (major); Ranking: 2$^{\rm nd}$/26  \\
   %========================================================
 \end{tabular}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{1em}
+%\vspace{-.8em}
 \section{Research Experience}
-\vspace{-1ex}
-\begin{longtable}{r|p{5.5in}}
+\vspace{-.8em}
+\begin{longtable}{r|p{5.6in}}
 %\begin{longtable}{r|p{17cm}}
-  %--------------------------------------------------------
+
+%--------------------------------------------------------
   \textsc{Sept. 2013}--  &   \emph{Title: The Grism Lens-Amplified Survey from Space (GLASS) program}   \\
-  \textsc{Present}       &   \small{\textit{GLASS} is a cycle-21 HST Large Program allocated 140 orbits of Grism spectroscopy
-  assisted with HST optical and infrared imaging. We survey the core and infall regions of 10 dynamically relaxed, massive
-  clusters, including 8 targeted by CLASH and 6 Frontier Fields. We will address three scientific questions: 1) What's the role that
-  galaxies play in the process of reionization? 2) Why and how is galaxy evolution environmental dependent? 3) How do metals cycle
-  in and out of galaxies and what's the interplay between cycling of metals and SF activities?}   \\
-  & \textbf{Project in progress and scientific product: 
+  \textsc{Present}       &   \small{\textit{GLASS} is a cycle-21 HST Large Program allocated 140 orbits of
+  Grism spectroscopy assisted with HST optical/infrared imaging. We survey the core and infall regions of 10
+  massive galaxy clusters, including 8 targeted by CLASH and 6 Frontier Fields. We will address three
+  scientific questions: 1) What's the role that galaxies play in the process of reionization? 2) Why and how
+  is galaxy evolution environmental dependent? 3) How do metals cycle in and out of galaxies and what's the
+  interplay between cycling of metals and SF activities?}   \\
+  & \textbf{Project in progress and scientific product:
+        \hyperlink{18.wang.apj}{Wang et al. (2018)},
         \hyperlink{17.wang.apj}{Wang et al. (2017)},
         \hyperlink{15.wang.apj}{Wang et al. (2015)},
         \hyperlink{15.jones.aj}{Jones et al. (2015)}} \\
-  \multicolumn{2}{c}{} \\
-  %--------------------------------------------------------
+  \multicolumn{2}{c}{} \\[\narrow]
+
+%--------------------------------------------------------
 %  \textsc{Sept. 2012}--  &   \emph{Title: Applications of the Non-Parametric Bayesian Method to Cosmological Reconstructions}	\\
 %  \textsc{Aug. 2013}     &   \small{We attempt to use the newly proposed non-parametric Bayesian method to reconstruct the
 %  evolution history of some crucial cosmological quantities, i.e., primordial perturbation power spectrum, dark energy equation of
@@ -138,18 +151,24 @@
 %  that those features can be detected by next generation projects, i.e., AS3, BigBOSS, Euclid, CMBPol.}	\\
 %  &   \textbf{Scientific Product: paper to be submitted} \\
 %  \multicolumn{2}{c}{} \\
-  %--------------------------------------------------------
-  \textsc{Jan. 2012}--   &   \emph{Title: Constraints on Cosmic Neutrinos and Dark Energy Revisited}  \\
-  \textsc{Dec. 2012}     &   \small{Using various cosmological observations, i.e., CMB, weak lensing (WL), BAO, observational Hubble
-  parameter data (OHD), type Ia supernovae (SNIa), we impose constraints on the sum of neutrino masses ($\Sigma m_{\nu}$), the
-  effective number of neutrino species ($N_{\rm eff}$) and dark energy equation of state ($w$). We find that a tight upper limit
-  on $\Sigma m_{\nu}$ can be extracted if $N_{\rm eff}$ and $w$ are fixed, however it will be severely weakened if $N_{\rm eff}$ and
-  $w$ are allowed to vary. This result raises questions on the robustness of previous strict upper bounds on $\Sigma m_{\nu}$,
+
+%--------------------------------------------------------
+  \textsc{Sept. 2011}--   &   \emph{Title: Constraints on Cosmic Neutrinos and Dark Energy Revisited}  \\
+  \textsc{Jun. 2013}     &   \small{Using various cosmological observations, i.e., CMB, weak lensing (WL),
+  BAO, observational Hubble parameter data (OHD), type Ia supernovae (SNIa), we impose constraints on the sum
+  of neutrino masses ($\Sigma m_{\nu}$), the effective number of neutrino species ($N_{\rm eff}$) and dark
+  energy equation of state ($w$). We find that a tight upper limit on $\Sigma m_{\nu}$ can be extracted if
+  $N_{\rm eff}$ and $w$ are fixed, however it will be severely weakened if $N_{\rm eff}$ and $w$ are allowed
+  to vary. This result raises questions on the robustness of previous strict upper bounds on $\Sigma m_{\nu}$,
   reported in the literature.
-  %The best-fits from our most generalized constraint read $\Sigma m_{\nu}=0.556^{+0.231}_{-0.288}\rm eV$, $N_{\rm eff}=3.839\pm0.452$, and $w=-1.058\pm0.088$. 
+  %The best-fits from our most generalized constraint read $\Sigma m_{\nu}=0.556^{+0.231}_{-0.288}\rm eV$,
+  %$N_{\rm eff}=3.839\pm0.452$, and $w=-1.058\pm0.088$.
   The different constraining abilities of current WL, OHD and SNIa samples are assessed and compared.}\\
-  &   \textbf{Scientific Product: \hyperlink{12.wang.jcap}{Wang et al. (2012)}}  \\
-  \multicolumn{2}{c}{} \\
+  &   \textbf{Scientific Product:
+        \hyperlink{12.wang.jcap}{Wang et al. (2012)},
+        \hyperlink{13.wang.raa}{Wang et al. (2013)}}  \\
+  \multicolumn{2}{c}{} \\[\narrow]
+
   %--------------------------------------------------------
 %  \textsc{Sept. 2011}--  &   \emph{Title: Using the Cosmic Distance-Duality Relation to Test the $f_{\rm gas}$ Measurements in Galaxy Clusters} \\
 %  \textsc{Jan. 2012}     &   \small{We propose a new method to assess X-ray measurements of galaxy cluster gas fraction ($f_{\rm
@@ -170,41 +189,45 @@
 %  with the spherical $\beta$-model.}    \\
 %  &   \textbf{Scientific Product: \hyperlink{12.meng.apj}{Meng et al. (2012)}} \\
 %  \multicolumn{2}{c}{} \\
-  %--------------------------------------------------------
-  \textsc{Sept. 2008}--  &   \emph{Title: Investigation on the Emission from the Receding Jet of Gamma-Ray Bursts}   \\
-  \textsc{Jun. 2010}    &   \small{We studied the dynamical evolution of double-sided jets launched by 
-  the central engine of GRBs and calculated the afterglow emission from both jet components. For the first time, we present a 
-  detailed numerical study on the afterglow contributed from the jet component receding from the observer, with the effects of 
-  synchrotron self-absorption and equal arrival time surface taken into account. It is found that the receding jet emission is 
-  generally very weak and only manifests as a plateau in the late time radio afterglow light curves. However the emission from the 
-  receding jet can be significantly enhanced and possibly detectable, if the circum-burst medium density is high.} \\
-  &   \textbf{Scientific Product: \hyperlink{09.wang.aa}{Wang et al. (2009)}, \hyperlink{10.wang.scichina}{Wang et al. (2010)}} \\
-  %========================================================
+
+%--------------------------------------------------------
+  \textsc{Sept. 2008}--  &   \emph{Title: Investigation on the Emission from the Receding Jet of Gamma-Ray
+  Bursts}   \\
+  \textsc{Jun. 2010}    &   \small{We studied the dynamical evolution of double-sided jets launched by the
+  central engine of GRBs and calculated the afterglow emission from both jet components. For the first time,
+  we present a detailed numerical study on the afterglow contributed from the jet component receding from the
+  observer, with the effects of synchrotron self-absorption and equal arrival time surface taken into account.
+  It is found that the receding jet emission is generally very weak and only manifests as a plateau in the
+  late time radio afterglow light curves. However the emission from the receding jet can be significantly
+  enhanced and possibly detectable, if the circum-burst medium density is high.} \\
+  &   \textbf{Scientific Product:
+        \hyperlink{09.wang.aa}{Wang et al. (2009)},
+        \hyperlink{10.wang.scichina}{Wang et al. (2010)}} \\
+
+%========================================================
 \end{longtable}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\vspace{1em}
+\vspace{-1em}
 \section{Publications}
+\vspace{-.8em}
+
 \begin{longtable}{p{6in}}
 %\begin{longtable}{p{17cm}}
 \multicolumn{1}{c}{\textsc{1st/2nd Author Papers in Refereed Academic Journals}}      \\
-\vspace{-0.2cm}
+\vspace{-1em}
+
 \begin{list}{\labelitemi}{\leftmargin=0.5em}
     \item[1]\hypertarget{09.wang.aa}{} \textbf{Wang, X.}, Huang, Y. F., \& Kong, S. W. On the Afterglow from the Receding Jet of Gamma-Ray Bursts. 2009, \textit{Astron. Astrophys.}, 505, 1213 (\href{http://arxiv.org/abs/0903.3119}{arXiv:0903.3119})
     \item[2]\hypertarget{10.wang.scichina}{} \textbf{Wang, X.}, Huang, Y. F., \& Kong, S. W. Constraint on the Counter-jet Emission in GRB Afterglows from GRB 980703. 2010, \textit{Sci. China-Phys. Mech. Astron.}, 53 (Suppl.1), 259
     \item[3]\hypertarget{12.wang.jcap}{} \textbf{Wang, X.}, Meng, X.-L. et al. Observational Constraints on Cosmic Neutrinos and Dark Energy Revisited. 2012, \textit{J. Cosmol. Astropart. Phys.}, 11, 018 (\href{http://arxiv.org/abs/1210.2136}{arXiv:1210.2136})
     \item[4]\hypertarget{13.wang.raa}{} \textbf{Wang, X.}, Meng, X.-L., \& Huang, Y. F., Testing X-ray Measurements of Galaxy Cluster Gas
   Mass Fraction Using the Cosmic Distance-Duality Relation and Type Ia Supernovae. 2013, RAA, 13, 1013 (\href{http://arxiv.org/abs/1305.2077}{arXiv:1305.2077})
-    \item[5]\hypertarget{15.jones.aj}{} Jones, T., \textbf{Wang, X.} et al. The Grism Lens-Amplified Survey from Space (GLASS) II.
-        Gas-Phase Metallicity and Radial Gradients in an Interacting System At z$\sim$2. 2015, \textit{Astron. J.}, 149, 107
-        (\href{http://arxiv.org/abs/1410.0967}{arXiv:1410.0967})
-    \item[6]\hypertarget{15.wang.apj}{} \textbf{Wang, X.} et al. The Grism Lens-Amplified Survey from Space (GLASS) IV. 
-        Mass reconstruction of the lensing cluster Abell 2744 from frontier field imaging and GLASS spectroscopy. 2015, 
-        \textit{Astrophys. J.}, 811, 29 (\href{http://arxiv.org/abs/1504.02405}{arXiv:1504.02405})
-    \item[7]\hypertarget{17.wang.apj}{} \textbf{Wang, X.} et al. The Grism Lens-Amplified Survey from Space (GLASS) X.
-        Sub-kiloparsec resolution gas-phase metallicity maps at cosmic noon behind the Hubble Frontier Fields cluster MACS1149.6+2223. 
-        2017, \textit{Astrophys. J.}, 837, 89 (\href{http://arxiv.org/abs/1610.07558}{arXiv:1610.07558})
-\end{list}  \\
+    \item[5]\hypertarget{15.jones.aj}{} Jones, T., \textbf{Wang, X.} et al. The Grism Lens-Amplified Survey from Space (GLASS) II. Gas-Phase Metallicity and Radial Gradients in an Interacting System At z$\sim$2. 2015, \textit{Astron. J.}, 149, 107 (\href{http://arxiv.org/abs/1410.0967}{arXiv:1410.0967})
+    \item[6]\hypertarget{15.wang.apj}{} \textbf{Wang, X.} et al. The Grism Lens-Amplified Survey from Space (GLASS) IV. Mass reconstruction of the lensing cluster Abell 2744 from frontier field imaging and GLASS spectroscopy. 2015, \textit{Astrophys. J.}, 811, 29 (\href{http://arxiv.org/abs/1504.02405}{arXiv:1504.02405})
+    \item[7]\hypertarget{17.wang.apj}{} \textbf{Wang, X.} et al. The Grism Lens-Amplified Survey from Space (GLASS) X. Sub-kiloparsec resolution gas-phase metallicity maps at cosmic noon behind the Hubble Frontier Fields cluster MACS1149.6+2223. 2017, \textit{Astrophys. J.}, 837, 89 (\href{http://arxiv.org/abs/1610.07558}{arXiv:1610.07558})
+    \item[8]\hypertarget{18.wang.apj}{} \textbf{Wang, X.} et al. Discovery of Strongly inverted metallicity gradients in Dwarf Galaxies at $z$$\sim$2. 2018, \textit{Astrophys. J.} submitted (\href{https://arxiv.org/abs/1808.08800}{arXiv:1808.08800})
+\end{list}  \\[\narrow]
 %\multicolumn{1}{c}{\textsc{Conference Contributions, Unrefereed}}    \\
 %\vspace{-0.4cm}
 %\begin{list}{\labelitemi}{\leftmargin=0.5em}
@@ -212,19 +235,19 @@
 %\end{list}   \\
 
 \multicolumn{1}{c}{\textsc{Contributing Author Papers in Refereed Academic Journals}}      \\
-\vspace{-0.2cm}
+\vspace{-1em}
 \begin{list}{\labelitemi}{\leftmargin=0.5em}
     \item[1]\hypertarget{12.meng.apj}{} Meng, X.-L., Zhang, T.-J., Zhan, H., \& \textbf{Wang, X.} Morphology of Galaxy Clusters: A Cosmological Model-Independent Test of the Cosmic Distance-Duality Relation. 2012, \textit{Astrophys. J.}, 745, 98 (\href{http://arxiv.org/abs/1104.2833}{arXiv:1104.2833})
     \item[2]\hypertarget{14.schmidt.apjl}{} Schmidt, K. B., Treu, T., Brammer, G. B., Bradac, M., \textbf{Wang, X.} et al. Through the Looking GLASS: HST Spectroscopy of Faint Galaxies Lensed by the Frontier Fields Cluster MACSJ0717.5+3745. 2014, \textit{Astrophys. J. Letters}, 782L, 36 (\href{http://arxiv.org/abs/1401.0532}{arXiv:1401.0532})
-    \item[3]\hypertarget{}{} Treu, T., Schmidt, K. B., Brammer, G. B., Vulcani, B., \textbf{Wang, X.} et al. The Grism 
-    Lens-Amplified Survey from Space (GLASS). I. Survey Overview and First Data Release, 2015, \textit{Astrophys. J.}, 812, 114 
+    \item[3]\hypertarget{}{} Treu, T., Schmidt, K. B., Brammer, G. B., Vulcani, B., \textbf{Wang, X.} et al. The Grism
+    Lens-Amplified Survey from Space (GLASS). I. Survey Overview and First Data Release, 2015, \textit{Astrophys. J.}, 812, 114
     (\href{https://arxiv.org/abs/1509.00475}{arXiv:1509.00475})
-    \item[4]\hypertarget{}{} Morishita, T., Abramson, L. E., Treu, T., Schmidt, K. B., Vulcani, B., \textbf{Wang, X.} 
-    Characterizing Intracluster Light in the Hubble Frontier Fields. 2017, \textit{Astrophys. J.}, 846, 139 
+    \item[4]\hypertarget{}{} Morishita, T., Abramson, L. E., Treu, T., Schmidt, K. B., Vulcani, B., \textbf{Wang, X.}
+    Characterizing Intracluster Light in the Hubble Frontier Fields. 2017, \textit{Astrophys. J.}, 846, 139
     (\href{https://arxiv.org/abs/1610.08503}{arXiv:1610.08503})
-    \item[5]\hypertarget{}{} Kelly, P. L., ..., \textbf{Wang, X.} et al. An individual star at redshift 1.5 extremely magnified by 
+    \item[5]\hypertarget{}{} Kelly, P. L., ..., \textbf{Wang, X.} et al. An individual star at redshift 1.5 extremely magnified by
     a galaxy-cluster lens. 2018, \textit{Nature Astronomy}, in press (\href{https://arxiv.org/abs/1706.10279}{arXiv:1706.10279})
-    \item[6]\hypertarget{}{} Morishita, T., Abramson, L. E., Treu, T., \textbf{Wang, X.} et al.  Metal Deficiency in Two Massive Dead 
+    \item[6]\hypertarget{}{} Morishita, T., Abramson, L. E., Treu, T., \textbf{Wang, X.} et al.  Metal Deficiency in Two Massive Dead
     Galaxies at z$\sim$2, 2018, \textit{Astrophys. J. Letters}, 856L, 4 (\href{https://arxiv.org/abs/1803.01852}{arXiv:1803.01852})
 \end{list}
 
@@ -232,10 +255,13 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{-1.5em}
-\section{Academic Activities (selected)}
+\vspace{-2.5em}
+\section{Talks and Colloquia (selected)}
+\vspace{-0.8em}
 
-\begin{longtable}{r|p{5.5in}}
+\begingroup
+\renewcommand\arraystretch{0.3}
+\begin{longtable}{r|p{5.6in}}
 %\begin{longtable}{r|p{16.5cm}}
 
     \textsc{Apr. 2009}   &   \textbf{Contributed talk}, @ \href{http://www.ns-grb.com/index0.html}{Frontiers of Space Astrophysics: Neutron Stars \& Gamma Ray Bursts --- Recent Developments \& Future Directions}, Cairo \& Alexandria, Egypt     \\
@@ -248,8 +274,7 @@
 %            &   \emph{Title: Observational constraints on cosmic neutrinos and dark energy revisited}    \\
 %    \multicolumn{2}{c}{} \\
 
-    \textsc{Aug. 2015}   &   \textbf{Contributed talk}, @ \href{http://hffiau.epfl.ch/page-116896.html}{Focus Meeting 22 at XXIX IAU
-General Assembly}, Honolulu, HI     \\
+    \textsc{Aug. 2015}   &   \textbf{Contributed talk}, @ \href{http://hffiau.epfl.ch/page-116896.html}{Focus Meeting 22 at the XXIXth IAU General Assembly}, Honolulu, HI     \\
     \multicolumn{2}{c}{} \\
 
     \textsc{Jun. 2016}   &   \textbf{Invited talk}, @ Nanjing University, Nanjing \\
@@ -270,13 +295,13 @@ General Assembly}, Honolulu, HI     \\
     \textsc{Jan. 2017}   &   \textbf{Colloquium talk}, @ Steward Observatory, University of Arizona, Tucson, AZ \\
     \multicolumn{2}{c}{} \\
 
-    \textsc{Jun. 2017}   &   \textbf{Contributed talk}, @ 
-    \href{http://eas.unige.ch/EWASS2017/session.jsp?id=SS11}{Special Session 11 at 
+    \textsc{Jun. 2017}   &   \textbf{Contributed talk}, @
+    \href{http://eas.unige.ch/EWASS2017/session.jsp?id=SS11}{Special Session 11 at
     European Week of Astronomy and Space Science}, Prague, Czech Republic   \\
     \multicolumn{2}{c}{} \\
 
     \textsc{Aug. 2017}   &   \textbf{Contributed talk}, @
-    \href{http://darkuniverse2017.csp.escience.cn/dct/page/65580}{Shedding Light on 
+    \href{http://darkuniverse2017.csp.escience.cn/dct/page/65580}{Shedding Light on
     the Dark Universe with Extremely Large Telescopes}, Lanzhou, China      \\
     \multicolumn{2}{c}{} \\
 
@@ -293,64 +318,116 @@ General Assembly}, Honolulu, HI     \\
     \multicolumn{2}{c}{} \\
 
     \textsc{Feb. 2018}   &   \href{https://www.ipac.caltech.edu/event/358}{\textbf{Colloquium talk}}, @ IPAC, Caltech, Pasadena, CA \\
-    \multicolumn{2}{c}{}
+    \multicolumn{2}{c}{} \\
+
+    \textsc{May 2018}   &   \textbf{Invited talk}, @ 2018 Nanjing University Youth Forum, Nanjing, China \\
+    \multicolumn{2}{c}{} \\
+
+    \textsc{Jun. 2018}   &   \textbf{Contributed talk with conference fellowship}, @ \href{http://kiaa.pku.edu.cn/gasingalaxies/?q=program}{KIAA Forum on Gas in Galaxies}, Beijing, China \\
+    \multicolumn{2}{c}{} \\
+
+    \textsc{Jul. 2018}   &   \textbf{Invited talk}, @ University of Science and Technology of China, Hefei \\
+    \multicolumn{2}{c}{} \\
+
+    \textsc{Aug. 2018}   &   \textbf{Contributed talk}, @ \href{http://www.arcetri.astro.it/fm7/programme.html}{Focus Meeting 7 at the XXXth IAU General Assembly}, Vienna, Austria \\
 
 \end{longtable}
+\endgroup
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{-1.2em}
+\vspace{-1em}
 \section{Awards and Honors (selected)}
-\begin{tabular}{rp{5in}}
-~~~~~~\textsc{Apr. 2015} & AAS International Travel Grant (\$1k)    \\
-~~~~~~\textsc{Jun. 2014} & 1$^{\rm st}$ Prize for Excellent M.Sc. Thesis amongst all Universities and Colleges in Jiangsu Province   \\
-~~~~~~\textsc{Sept. 2013} & Broida Fellowship, UCSB (\$3k)  \\
-~~~~~~\textsc{Dec. 2012} & National Scholarship for Graduates ($\sim$\$4k)  \\
-& {\it\small ~~~highest honorific scholarship in China conferred annually on excellent graduate students}\\
-%~~~~~~\textsc{Jan. 2012} & Excellent Graduate Leader in School of Astronomy and Space Sciences, Nanjing University  \\
-%~~~~~~\textsc{Nov. 2010} & Scholarship for Excellent Graduate Students in Nanjing University \\
-~~~~~~\textsc{Aug. 2010} & 1$^{\rm st}$ Prize for Excellent B.Sc. Thesis amongst all Universities and Colleges in Jiangsu Province   \\
-~~~~~~\textsc{Oct. 2009} & Scholarship of National Astronomical Observatories, Chinese Academy of Sciences   \\
+\begin{tabular}{r|p{5.6in}}
+    \textsc{Jun. 2018} & UCLA Dissertation Year Fellowship (\$37k: stipend+tuition)    \\
+    \multicolumn{2}{c}{} \\[\narrow]
+    \textsc{May 2018} & Rudnick-Abelmann Fellowship, UCLA (\$2k)      \\
+    \multicolumn{2}{c}{} \\[\narrow]
+    \textsc{Apr. 2018} & IAU grant for participating the XXXth General Assembly (\euro0.75k)  \\
+    \multicolumn{2}{c}{} \\[\narrow]
+    \textsc{Apr. 2018} & AAS International Travel Grant (\$2k)    \\
+    \multicolumn{2}{c}{} \\[\narrow]
+    \textsc{Apr. 2015} & AAS International Travel Grant (\$1k)    \\
+    \multicolumn{2}{c}{} \\[\narrow]
+    \textsc{Jun. 2014} & 1$^{\rm st}$ Prize for Excellent M.Sc. Thesis amongst all Universities and Colleges in Jiangsu Province   \\
+    \multicolumn{2}{c}{} \\[\narrow]
+    \textsc{Sept. 2013} & Broida Fellowship, UCSB (\$3k)  \\
+    \multicolumn{2}{c}{} \\[\narrow]
+    \textsc{Dec. 2012} & National Scholarship for Graduates ($\sim$\$4k)  \\
+                     & {\it\small This is the highest honorific scholarship in China conferred annually on excellent graduate students.}\\
+    \multicolumn{2}{c}{} \\[\narrow]
+%    \textsc{Jan. 2012} & Excellent Graduate Leader in School of Astronomy and Space Sciences, Nanjing University  \\
+%    \multicolumn{2}{c}{} \\[\narrow]
+%    \textsc{Nov. 2010} & Scholarship for Excellent Graduate Students in Nanjing University \\
+%    \multicolumn{2}{c}{} \\[\narrow]
+    \textsc{Aug. 2010} & 1$^{\rm st}$ Prize for Excellent B.Sc. Thesis amongst all Universities and Colleges in Jiangsu Province   \\
+    \multicolumn{2}{c}{} \\[\narrow]
+    \textsc{Oct. 2009} & Scholarship of National Astronomical Observatories, Chinese Academy of Sciences   \\
 %\textsc{2007--2008} & Special Scholarship for Innovation, People's Scholarship, \textit{Der} Scholarship, etc.   \\
 \end{tabular}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{0.8em}
+%\vspace{-.5em}
 \section{Computer Skills}
 ~~~~Python, MATLAB, FORTRAN, C, \LaTeX, vim, Github, Mathmatica
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{0.8em}
-\section{Working Experience and Outreach Activities}
-\begin{tabular}{rp{5.5in}}
-%\begin{tabular}{rp{16cm}}
+%\vspace{-.5em}
+\section{Professional Service}
+~\textbullet~Referee for \textit{Astrophysical Journal}, \textit{Astrophysical Journal Supplement Series}
 
-\textsc{2010--2012}  & President of Graduate Student Union in School of Astronomy and Space Sciences, NJU \\
-\multicolumn{2}{c}{} \\
+\begin{tabular}{r|p{5.6in}}
 
-\textsc{\small Sept.--Dec. 2010}  & Teaching assistant of Theoretical Astrophysics (upper division undergraduate course), NJU \\
-\multicolumn{2}{c}{} \\
-
-\textsc{Dec. 2010}--  & Organizer of Graduate Journal Club in School of Astronomy 
-and Space Sciences, NJU \\
-\textsc{Dec. 2011}    & \small{In total, I arranged 17 meetings, and invited 
-34 speakers.
-%most of which are graduate students. The majority of the speakers come from our school, while we do have speakers from many other institutes, e.g., Purple Mountain Observatory, University of Science and Technology of China, University of Sydney. 
-The topics are related to the major field of interest of the speakers, who will also share with participants some academic experience in doing scientific research. This activity is financially supported by our school.}  \\
-\multicolumn{2}{c}{} \\
-
-\textsc{\small Sept.--Dec. 2013}  & Teaching assistant of Physics Lab hands-on courses, UCSB   \\
-\multicolumn{2}{c}{} \\
 \textsc{2014--2015}  & Organizer of Treu Group Meetings, UCSB \& UCLA \\
-\multicolumn{2}{c}{} \\
+\multicolumn{2}{c}{} \\[\narrow]
+
+\textsc{Dec. 2010}--  & Organizer of Graduate Journal Club in School of Astronomy and Space Sciences, NJU \\
+\textsc{Dec. 2011}    & \small{In total, I arranged 17 meetings, and invited 34 speakers.
+        %most of which are graduate students. The majority of the speakers come from our school, while we do
+        %have speakers from many other institutes, e.g., Purple Mountain Observatory, University of Science
+        %and Technology of China, University of Sydney.
+        The topics are related to the major field of interest of the speakers, who will also share with
+        participants some academic experience in doing scientific research. This activity is financially
+        supported by our school.}  \\
+\end{tabular}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace{0.8em}
+\section{Observing Experience}
+    A LOT
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace{0.8em}
+\section{Approved Proposals (CoI)}
+
+\begin{list}{\labelitemi}{\leftmargin=0.5em}
+    \item[1] JWST-ERS-1324, PI Treu: Through the Looking GLASS: A JWST Exploration of Galaxy Formation and Evolution from Cosmic Dawn to Present Day
+    \item[2] HST-14922, PI Kelly: Probing the Nature of Dark Matter with Individual Stars Highly Magnified by a Galaxy Cluster
+    \item[3] HST-14280, PI Bradac: Breaking Cosmic Dawn: Observing the z>7 Universe Through Cosmic Telescopes
+    \item[4] VLT-0101.B-0418(A), PI Sanchez-Janssen: Chemodynamics of lensed dwarf galaxies at $1\lesssim z\lesssim 2$
+    \item[n] Keck OSIRIS proposals spanning several seasons
+\end{list}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-.8em}
+\section{Teaching Experience}
+\begin{tabular}{rp{5.6in}}
+\textsc{\small Sept.--Dec. 2010}  & Teaching assistant of \textit{Theoretical Astrophysics} (upper division undergraduate course), NJU \\
+\textsc{\small Sept.--Dec. 2013}  & Teaching assistant of \textit{Physics 6 Lab}, UCSB   \\
+\textsc{\small Mar.--Jun. 2014}  & Teaching assistant of \textit{Physics 3: Basic Physics}, UCSB
+\end{tabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-.8em}
+\section{Working Experience and Outreach Activities}
+\begin{tabular}{rp{5.6in}}
+\textsc{2010--2012}  & President of Graduate Student Union in School of Astronomy and Space Sciences, NJU \\
 \textsc{2015--2017}  & Volunteer in the annual \textsc{Exploring Your Universe!} events, UCLA \\
-\multicolumn{2}{c}{} \\
-\textsc{2015--2017}  & Demonstrator of Astronomy experiments to local K12 schools in Los Angeles \\
-\multicolumn{2}{c}{} \\
-
-
+\textsc{2015--2017}  & Demonstrator of Astronomy experiments to local K12 schools in Los Angeles
 \end{tabular}
 
 
@@ -372,7 +449,6 @@ that those features can be detected by next generation projects, i.e., AS3, BigB
 &   \textbf{Project in progress} \\
 \multicolumn{2}{c}{} \\
 %--------------------------------------------------------
-
 \textsc{Jan. 2010}--     &   \emph{Title: Studies on the Temporal Analysis of Gamma-Ray Bursts}\\
 \textsc{Jul. 2010}       &   \small{I review the observational characteristics of GRBs and demonstrate in detail the procedures of Swift/BAT data reduction. Using the method and shell scripts developed by myself, I have analyzed the data of all Swift GRBs with redshift measurements and derived spectral lags with high precision. I have tested some empirical relations between spectral lag and some observational quantities, i.e., redshift, T90, peak flux, hardness ratio, $\rm E_{peak}$, $\rm E_{iso}$, etc.. Moreover, I have proved there is a high possibility that spectral lags and isotropic luminosity of GRBs are correlated.} \\
                 &   \textbf{Scientific Product: As my dissertation for B.Sc., this thesis has won 1$^{\rm st}$ prize for excellent B.Sc. thesis amongst all universities and colleges in Jiangsu province.} \\
